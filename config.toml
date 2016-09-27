@@ -18,7 +18,7 @@ theme = "hugo-creative-theme"
 	# For more informtion take a look at the README.
 
 	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
+  # information about you and your website.
 	name = "Diversal"
 	description = "devops, continuous delivery, deploy, jenkins"
 
@@ -49,7 +49,7 @@ theme = "hugo-creative-theme"
 #	About section
 	[params.about]
 	#	headline    = "559069-7602"
-		description = "Org. Nr: 559069-7602"#
+	#	description = "Org. Nr: 559069-7602"#
 #		buttonText  = "Get started!"
 
 
@@ -95,9 +95,11 @@ theme = "hugo-creative-theme"
 
 	# Contact section
 	[params.contact]
-		headline = "Let's Get In Touch!"
+		headline = ""
 		description = " "
 		phone = "+46709450857"
 		email = "info@diversal.se"
-		org = "Org.Nr: 559069-7602"
-		linkedin = "lkjljlkj"
+		org = "ORG: 559069-7602"
+		vat = "VAT: SE1111111111"
+		linkedin = "http://linkedin.com/in/jgunnarsson"
+		linkedinshort = "jgunnarsson"
