@@ -40,7 +40,7 @@ theme = "hugo-creative-theme"
 	# Hero section
 	[params.hero]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
-		slogan     = "Diversal Consulting"
+		slogan     = "<img src='img/diversallogo_white.png' width='90%'>"
 		subtitle   = "Devops, CD"
 #		subtitle	 = "Org.nr 559069-7602"
 #		buttonText = "Find out more"

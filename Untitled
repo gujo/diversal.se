@@ -1,0 +1,87 @@
+---
+version: "2"
+
+services:
+  copy-worker:
+    image: artifactory.viaplay.cloud:5000/common-exec-worker:fulfix
+    network_mode: bridge
+    container_name: copy-worker
+    environment:
+      - startupQuartzRouteProperty=true
+      - workerType=copyWorker
+      - environment=dev
+      - component=common-exec-worker
+      - application=common-service
+      - project=vp-assetmanagement
+    volumes:
+      - /nfs:/nfs
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    logging:
+      options:
+        max-size: "100m"
+
+  mux-worker:
+    image: artifactory.viaplay.cloud:5000/common-exec-worker:fulfix
+    container_name: mux-worker
+    network_mode: bridge
+    environment:
+      - startupQuartzRouteProperty=true
+      - workerType=muxWorker
+      - environment=dev
+      - component=common-exec-worker
+      - application=common-service
+      - project=vp-assetmanagement
+    volumes:
+      - /nfs:/nfs
+    expose:
+      - "8080"
+    ports:
+      - "9000:8080"
+    logging:
+      options:
+        max-size: "100m"
+
+  delete-worker:
+    image: artifactory.viaplay.cloud:5000/common-exec-worker:fulfix
+    network_mode: bridge
+    container_name: delete-worker
+    environment:
+      - startupQuartzRouteProperty=true
+      - workerType=deleteWorker
+      - environment=dev
+      - component=common-exec-worker
+      - application=common-service
+      - project=vp-assetmanagement
+    volumes:
+      - /nfs:/nfs
+    expose:
+      - "8080"
+    ports:
+      - "9001:8080"
+    logging:
+      options:
+        max-size: "100m"
+
+  move-worker:
+    image: artifactory.viaplay.cloud:5000/common-exec-worker:fulfix
+    network_mode: bridge
+    container_name: move-worker
+    environment:
+      - startupQuartzRouteProperty=true
+      - workerType=moveWorker
+      - environment=dev
+      - component=common-exec-worker
+      - application=common-service
+      - project=vp-assetmanagement
+    volumes:
+      - /nfs:/nfs
+    expose:
+      - "8080"
+    ports:
+      - "9002:8080"
+    logging:
+      options:
+        max-size: "100m"
