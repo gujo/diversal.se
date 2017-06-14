@@ -4,26 +4,9 @@ title = "Diversal Consulting"
 theme = "hugo-creative-theme"
 
 [params]
-
-	# You can use Markdown syntax for urls [text](//url.to/source) for
-	# most longer texts.
-
-	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
-	# for more icons. The icons are represented by their corresponding
-	# CSS class.
-
-	# All projects of the portfolio are defined in their own files.
-	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
-	# folder into the 'data' directory at the root of this Hugo site.
-	# For more informtion take a look at the README.
-
-	# To provide some metadata for search engines feel free to add a few
-  # information about you and your website.
 	name = "Diversal"
-	description = "devops, continuous delivery, deploy, jenkins"
-
-	# The path must be relative to the static folder
-	favicon = "favicon.ico"
+	description = "devops, continuous delivery, deploy, jenkins, kubernetes, docker, drone"
+	favicon = "favicon.ico" 	# The path must be relative to the static folder
 
 
 	# Navigation
@@ -37,69 +20,34 @@ theme = "hugo-creative-theme"
 			contact   = "Contact"
 
 
-	# Hero section
-	[params.hero]
-		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
-		slogan     = "<img src='img/diversallogo_white.png' width='90%'>"
-		subtitle   = "Devops, CD"
-#		subtitle	 = "Org.nr 559069-7602"
-#		buttonText = "Find out more"
+		# Hero section
+		[params.hero]
+			# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
+			slogan     = "<img src='img/diversallogo_white.png' width='90%'>"
+			subtitle   = "Devops, CD"
 
 
-#	About section
-	[params.about]
-	#	headline    = "559069-7602"
-	#	description = "Org. Nr: 559069-7602"#
-#		buttonText  = "Get started!"
+		#	About section
+		[params.about]
+			#	headline    = "559069-7602"
+			#	description = "Org. Nr: 559069-7602"#
+			#	buttonText  = "Get started!"
 
 
-	# # Service section
-	# [params.services]
-	# 	headline = "At your service"
-	#
-  #       [[params.services.list]]
-  #           icon = "fa-diamond"
-  #           title = "Sturdy Templates"
-  #           description = "Our templates are updated regularly so they don't break."
-	#
-  #       [[params.services.list]]
-	# 		icon = "fa-paper-plane"
-	# 		title = "Ready to Ship"
-	# 		description = "You can use this theme as is, or you can make changes!"
-	#
-	# 	[[params.services.list]]
-  #           icon = "fa-newspaper-o"
-  #           title = "Up to Date"
-  #           description = "We update dependencies to keep things fresh."
-	#
-  #       [[params.services.list]]
-  #           icon = "fa-heart"
-  #           title = "Made with Love"
-  #           description = "You have to make your websites with love these days!"
+	  # Portfolio modals
+		[params.portfolio.modal]
+	    client = "Client"
+	    date = "Date"
+	    category = "Category"
+	    buttonText = "Close"
 
-
-    # Portfolio modals
-	[params.portfolio.modal]
-        client = "Client"
-        date = "Date"
-        category = "Category"
-        buttonText = "Close"
-
-    # Aside section
-#	[params.aside]
-#		headline = "559069-7602"
-	#
-	# 	[params.aside.button]
-	# 		text = "Download now"
-	# 		link = "//github.com/digitalcraftsman/hugo-creative-theme"
-
-	# Contact section
-	[params.contact]
-		headline = ""
-		description = " "
-		phone = "+46709450857"
-		email = "info@diversal.se"
-		org = "ORG:559069-7602"
-		vat = "VAT:SE559069760201"
-		linkedin = "http://linkedin.com/in/jgunnarsson"
-		linkedinshort = "jgunnarsson"
+		# Contact section
+		[params.contact]
+			headline = ""
+			description = " "
+			phone = "+46709450857"
+			email = "info@diversal.se"
+			org = "ORG:559069-7602"
+			vat = "VAT:SE559069760201"
+			linkedin = "http://linkedin.com/in/jgunnarsson"
+			linkedinshort = "jgunnarsson"
