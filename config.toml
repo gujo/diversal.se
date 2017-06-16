@@ -8,7 +8,6 @@ theme = "hugo-creative-theme"
 	description = "devops, continuous delivery, deploy, jenkins, kubernetes, docker, drone"
 	favicon = "favicon.ico" 	# The path must be relative to the static folder
 
-
 	# Navigation
 	[params.navigation]
 		brand = "Diversal"
@@ -19,20 +18,11 @@ theme = "hugo-creative-theme"
 			portfolio = "Portfolio"
 			contact   = "Contact"
 
-
 		# Hero section
 		[params.hero]
 			# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 			slogan     = "<img src='img/diversallogo_white.png' width='90%'>"
 			subtitle   = "Devops, CD"
-
-
-		#	About section
-		[params.about]
-			#	headline    = "559069-7602"
-			#	description = "Org. Nr: 559069-7602"#
-			#	buttonText  = "Get started!"
-
 
 	  # Portfolio modals
 		[params.portfolio.modal]
