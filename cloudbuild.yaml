@@ -1,0 +1,16 @@
+steps:
+- name: 'jguyomard/hugo-builder'
+  args: ['hugo']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/diversalse']
+
+- name: 'gcr.io/cloud-builders/kubectl'
+  env: ['CLOUDSDK_COMPUTE_ZONE=europe-west1-b', 'CLOUDSDK_CONTAINER_CLUSTER=vus-labs-cluster']
+  args: ['apply', '-f', 'deployment.yaml']
+  dir: 'services/gui'
+
+images: ['gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA']
