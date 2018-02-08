@@ -16,7 +16,7 @@ spec:
         image: gcr.io/diversal-193613/diversalse:$COMMIT_SHA
         livenessProbe:
           httpGet:
-            path: /
+            path: /index.html
             port: 80
           initialDelaySeconds: 3
           periodSeconds: 3
