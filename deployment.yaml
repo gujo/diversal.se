@@ -12,7 +12,7 @@ spec:
         app: diversalse
     spec:
       containers:
-      - name: gui
+      - name: diversalse
         image: gcr.io/diversal-193613/diversalse:$COMMIT_SHA
         livenessProbe:
           httpGet:
