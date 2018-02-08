@@ -11,6 +11,5 @@ steps:
 - name: 'gcr.io/cloud-builders/kubectl'
   env: ['CLOUDSDK_COMPUTE_ZONE=europe-west1-b', 'CLOUDSDK_CONTAINER_CLUSTER=vus-labs-cluster']
   args: ['apply', '-f', 'deployment.yaml']
-  dir: 'services/gui'
 
 images: ['gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA']
