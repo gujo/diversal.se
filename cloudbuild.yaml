@@ -1,4 +1,10 @@
+---
 steps:
+
+- name: 'gcr.io/$PROJECT_ID/envsubst'
+  args: ['deployment.yaml', 'deployment.yaml']
+  env: ['COMMIT_SHA=$COMMIT_SHA']
+
 - name: 'jguyomard/hugo-builder'
   args: ['hugo']
 
