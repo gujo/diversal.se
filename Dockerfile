@@ -1,4 +1,6 @@
 FROM nginx:alpine
-copy public/ /usr/share/nginx/html/
+
+RUN rm -f /usr/share/nginx/html/*
+COPY public/ /usr/share/nginx/html/
 
 EXPOSE 80
