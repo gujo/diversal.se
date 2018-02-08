@@ -9,7 +9,7 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/diversalse']
 
 - name: 'gcr.io/cloud-builders/kubectl'
-  env: ['CLOUDSDK_COMPUTE_ZONE=europe-west1-b', 'CLOUDSDK_CONTAINER_CLUSTER=vus-labs-cluster']
+  env: ['CLOUDSDK_COMPUTE_ZONE=europe-west1-b', 'CLOUDSDK_CONTAINER_CLUSTER=diversal']
   args: ['apply', '-f', 'deployment.yaml']
 
 images: ['gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA']
