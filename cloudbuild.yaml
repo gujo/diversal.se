@@ -5,8 +5,8 @@ steps:
   args: ['deployment.yaml', 'deployment.yaml']
   env: ['COMMIT_SHA=$COMMIT_SHA']
 
-- name: 'jguyomard/hugo-builder'
-  args: ['sleep', '1000']
+- name: 'jojomi/hugo'
+  args: ['hugo']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA', '.']
