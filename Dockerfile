@@ -1,5 +1,6 @@
 FROM nginx:alpine
 
-COPY public/ /usr/share/nginx/html/
+RUN mkdir /www/
+COPY public/ /www/
 
 EXPOSE 80
