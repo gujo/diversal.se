@@ -16,11 +16,11 @@
             {{ if .Site.Params.contact.phone }}
                 <div class="
                 {{ if .Site.Params.contact.email }}
-                    col-lg-4
+                    col-lg-2
                 {{ else }}
                     col-lg-8
                 {{ end }}
-                col-lg-offset-2 text-center">
+                col-lg-offset-1 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
                     <p>{{ .Site.Params.contact.phone }}</p>
                 </div>
@@ -28,15 +28,55 @@
             {{ if .Site.Params.contact.email }}
                 <div class="
                 {{ if .Site.Params.contact.phone }}
-                    col-lg-4
+                    col-lg-2
                 {{ else }}
-                    col-lg-8 col-lg-offset-2
+                    col-lg-8
                 {{ end }}
-                 text-center">
+                text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p><a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a></p>
                 </div>
             {{ end }}
+            {{ if .Site.Params.contact.linkedin }}
+                <div class="
+                {{ if .Site.Params.contact.linkedin }}
+                    col-lg-2
+                {{ else }}
+                    col-lg-8
+                {{ end }}
+                 text-center">
+                    <i class="fa fa-linkedin-square fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="{{ .Site.Params.contact.linkedin }}">{{ .Site.Params.contact.linkedinshort }}</a></p>
+                </div>
+            {{ end }}
+            {{ if .Site.Params.contact.org }}
+                <div class="
+                {{ if .Site.Params.contact.org }}
+                    col-lg-2
+                {{ else }}
+                    col-lg-8
+                {{ end }}
+                 text-center">
+                    <i class="fa fa-check-square fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p>{{ .Site.Params.contact.org }}</p>
+                </div>
+            {{ end }}
+            {{ if .Site.Params.contact.vat }}
+                <div class="
+                {{ if .Site.Params.contact.vat }}
+                    col-lg-2
+                {{ else }}
+                    col-lg-8
+                {{ end }}
+                 text-center">
+                    <i class="fa fa-check-square-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p>{{ .Site.Params.contact.vat }}</p>
+                </div>
+            {{ end }}
+
+
+
+
         </div>
     </div>
 </section>
