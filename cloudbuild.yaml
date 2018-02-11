@@ -6,7 +6,7 @@ steps:
   env: ['COMMIT_SHA=$COMMIT_SHA']
 
 - name: 'jguyomard/hugo-builder'
-  args: ['hugo', '-s', '.']
+  args: ['hugo']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA', '.']
