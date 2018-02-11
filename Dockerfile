@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
 RUN mkdir /www/
-COPY / /www/
+COPY public/ /usr/share/nginx/html/
 
 EXPOSE 80
