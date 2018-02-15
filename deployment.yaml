@@ -1,0 +1,42 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: diversalse
+spec:
+  replicas: 1
+  template:
+    metadata:
+      annotations:
+        description: diversal.se
+      labels:
+        app: diversalse
+    spec:
+      containers:
+      - name: diversalse
+        image: gcr.io/diversal-193613/diversalse:$COMMIT_SHA
+        livenessProbe:
+          httpGet:
+            path: /index.html
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        ports:
+          - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: diversalse
+  annotations:
+        description: diversal.se
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: diversalse

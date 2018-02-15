@@ -1,0 +1,21 @@
+---
+steps:
+
+- name: 'gcr.io/$PROJECT_ID/envsubst'
+  args: ['deployment.yaml', 'deployment.yaml']
+  env: ['COMMIT_SHA=$COMMIT_SHA']
+
+- name: 'jojomi/hugo'
+  args: ['hugo']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/diversalse']
+
+- name: 'gcr.io/cloud-builders/kubectl'
+  env: ['CLOUDSDK_COMPUTE_ZONE=europe-west1-b', 'CLOUDSDK_CONTAINER_CLUSTER=diversal']
+  args: ['apply', '-f', 'deployment.yaml']
+
+images: ['gcr.io/$PROJECT_ID/diversalse:$COMMIT_SHA']
