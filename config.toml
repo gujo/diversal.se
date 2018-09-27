@@ -1,4 +1,4 @@
-baseurl = "http://www.diversal.se/"
+baseurl = "https://www.diversal.se"
 languageCode = "en-us"
 title = "Diversal Consulting"
 theme = "hugo-creative-theme"
